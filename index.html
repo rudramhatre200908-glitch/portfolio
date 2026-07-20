@@ -1,282 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Apple Store</title>
-
-    <link rel="stylesheet" href="style.css">
-
-    <!-- Font Awesome -->
-    <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FreshMart Grocery Store</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
-
 <body>
 
-<!-- ================= NAVBAR ================= -->
-
 <header>
+    <h1>🥬 FreshMart</h1>
 
-<nav class="navbar">
+    <div class="search-box">
+        <input type="text" id="search" placeholder="Search groceries...">
+    </div>
 
-<div class="logo">
-<i class="fa-brands fa-apple"></i>
-</div>
-
-<ul class="nav-links">
-<li><a href="#">Store</a></li>
-<li><a href="#">Mac</a></li>
-<li><a href="#">iPad</a></li>
-<li><a href="#">iPhone</a></li>
-<li><a href="#">Watch</a></li>
-<li><a href="#">AirPods</a></li>
-<li><a href="#">TV & Home</a></li>
-<li><a href="#">Accessories</a></li>
-<li><a href="#">Support</a></li>
-</ul>
-
-<div class="icons">
-<i class="fas fa-search"></i>
-<i class="fas fa-shopping-bag"></i>
-</div>
-
-</nav>
-
+    <div class="cart-icon">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <span id="count">0</span>
+    </div>
 </header>
 
-<!-- ================= HERO ================= -->
-
-<section class="hero">
-
-<h1>Apple Store</h1>
-
-<p>The best way to buy the products you love.</p>
-
-<button>Shop Now</button>
-
-</section>
-
-<!-- ================= PRODUCTS ================= -->
-
-<section class="products">
-
-<h2>Featured Products</h2>
-
-<div class="product-container">
-
-<!-- Product 1 -->
-
-<div class="card">
-
-<img src="https://iclusters.in/cdn/shop/files/Apple-iPhone-16-Pro-hero-240909-lp.jpg.landing-big_2x_7e5d6edc-f6d3-42dc-aaa4-5e7b0dccec1f.jpg?v=1768544471" alt="">
-
-<h3>iPhone 16 Pro</h3>
-
-<p>Built for Apple Intelligence.</p>
-
-<span>₹1,19,900</span>
-
-<button onclick="addCart()">Add to Cart</button>
-
-</div>
-
-<!-- Product 2 -->
-
-<div class="card">
-
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Macbook_Air_15_inch_-_2_%28blurred%29.jpg/1280px-Macbook_Air_15_inch_-_2_%28blurred%29.jpg" alt="">
-
-<h3>MacBook Air M4</h3>
-
-<p>Supercharged by Apple Silicon.</p>
-
-<span>₹99,900</span>
-
-<button onclick="addCart()">Add to Cart</button>
-
-</div>
-
-<!-- Product 3 -->
-
-<div class="card">
-
-<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUu0R5AdaYvskD98ojBoRL4axS6YsaKXczVXzM11UiBjv-YrOfXAcR2u9n&s=10" alt="">
-
-<h3>iPad Air</h3>
-
-<p>Powerful. Colorful. Wonderful.</p>
-
-<span>₹59,900</span>
-
-<button onclick="addCart()">Add to Cart</button>
-
-</div>
-
-<!-- Product 4 -->
-
-<div class="card">
-
-<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPhuz1mDjOa5c1ZBPh9vL_A2wPBbCbw7KTtHnbDIcvCg&s=10" alt="">
-
-<h3>Apple Watch</h3>
-
-<p>Your health companion.</p>
-
-<span>₹46,900</span>
-
-<button onclick="addCart()">Add to Cart</button>
-
-</div>
-
-<!-- Product 5 -->
-
-<div class="card">
-
-<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeboRCs3jtP5iZKlCLDruUSY52hmWdU4nUGTbhX0Ld-A&s=10" alt="">
-
-<h3>AirPods Pro</h3>
-
-<p>Adaptive Audio.</p>
-
-<span>₹24,900</span>
-
-<button onclick="addCart()">Add to Cart</button>
-
-</div>
-
-<!-- Product 6 -->
-
-<div class="card">
-
-<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxuuFbFZDg0Nf-CbN7dTnDfBNX_ZrvxHZIuptyX40Ylg&s=10" alt="">
-
-<h3>iMac</h3>
-
-<p>Fits perfectly in your life.</p>
-
-<span>₹1,34,900</span>
-
-<button onclick="addCart()">Add to Cart</button>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- ================= WHY APPLE ================= -->
-
-<section class="features">
-
-<h2>Why Apple?</h2>
-
-<div class="feature-box">
-
-<div class="feature">
-<i class="fas fa-truck"></i>
-<h3>Free Delivery</h3>
-<p>Free shipping on every order.</p>
-</div>
-
-<div class="feature">
-<i class="fas fa-credit-card"></i>
-<h3>Easy EMI</h3>
-<p>No Cost EMI available.</p>
-</div>
-
-<div class="feature">
-<i class="fas fa-sync-alt"></i>
-<h3>Easy Exchange</h3>
-<p>Trade in your old device.</p>
-</div>
-
-<div class="feature">
-<i class="fas fa-shield-alt"></i>
-<h3>AppleCare+</h3>
-<p>Extended protection.</p>
-</div>
-
-</div>
-
-</section>
-
-<!-- ================= BANNER ================= -->
-
 <section class="banner">
-
-<h2>Apple Intelligence</h2>
-
-<p>Smarter. Faster. More Personal.</p>
-
-<button>Learn More</button>
-
+    <h2>Fresh Groceries Delivered to Your Door</h2>
+    <p>Healthy • Fresh • Affordable</p>
 </section>
 
-<!-- ================= NEWSLETTER ================= -->
+<div class="products" id="productList">
 
-<section class="newsletter">
+<div class="card">
+<img src="https://images.unsplash.com/photo-1567306226416-28f0efdc88ce?w=500" alt="">
+<h3>Fresh Apples</h3>
+<p>₹120 / Kg</p>
+<button onclick="addCart(120)">Add to Cart</button>
+<button class="wish">❤</button>
+</div>
 
-<h2>Stay Updated</h2>
+<div class="card">
+<img src="https://i0.wp.com/images-prod.healthline.com/hlcmsresource/images/AN_images/tomatoes-1296x728-feature.jpg?w=1155&h=1528" alt="">
+<h3>Tomatoes</h3>
+<p>₹40 / Kg</p>
+<button onclick="addCart(40)">Add to Cart</button>
+<button class="wish">❤</button>
+</div>
 
-<p>Get Apple news and latest launches.</p>
+<div class="card">
+<img src="https://4.imimg.com/data4/JA/TS/MY-33299067/fresh-milk.jpg" alt="">
+<h3>Milk</h3>
+<p>₹60</p>
+<button onclick="addCart(60)">Add to Cart</button>
+<button class="wish">❤</button>
+</div>
 
-<input type="email" placeholder="Enter Email">
+<div class="card">
+<img src="https://img.magnific.com/free-photo/view-whole-cut-fresh-black-bread-towel-brown-wooden-tray-dark-mix-colors-surface_179666-24381.jpg?semt=ais_hybrid&w=740&q=80" alt="">
+<h3>Bread</h3>
+<p>₹35</p>
+<button onclick="addCart(35)">Add to Cart</button>
+<button class="wish">❤</button>
+</div>
 
-<button>Subscribe</button>
+<div class="card">
+<img src="https://img.magnific.com/free-photo/top-view-raw-rice-inside-plate-dark-desk_179666-27235.jpg?semt=ais_hybrid&w=740&q=80" alt="">
+<h3>Rice</h3>
+<p>₹90 / Kg</p>
+<button onclick="addCart(90)">Add to Cart</button>
+<button class="wish">❤</button>
+</div>
 
+<div class="card">
+<img src="https://media.istockphoto.com/id/2202439981/photo/basket-of-fresh-chicken-eggs-on-wooden-table-eco-poultry-farm-free-range-chicken-farm-long.jpg?s=612x612&w=0&k=20&c=fvX_0mlmNgU_uwUNEqs-5SpNMaMSmWCE7qQ51nqm3iA=" alt="">
+<h3>Eggs</h3>
+<p>₹75</p>
+<button onclick="addCart(75)">Add to Cart</button>
+<button class="wish">❤</button>
+</div>
+
+<div class="card">
+<img src="https://t4.ftcdn.net/jpg/02/75/77/89/360_F_275778955_xxJe5fQvDy5oXbjupdJ162zLwU4sf3kT.jpg" alt="">
+<h3>Potato</h3>
+<p>₹50</p>
+<button onclick="addCart(60)">Add to Cart</button>
+<button class="wish">❤</button>
+</div>
+
+
+<div class="card">
+<img src="https://cpimg.tistatic.com/11030528/b/4/Coconut-Sugar..jpg" alt="">
+<h3>Brown Sugar</h3>
+<p>₹70</p>
+<button onclick="addCart(60)">Add to Cart</button>
+<button class="wish">❤</button>
+</div>
+
+<div class="card">
+<img src="https://spicebasket.com/cdn/shop/files/basmati-rice-1kg-4868958.jpg?v=1759023549&width=1946" alt="">
+<h3>Basmati Rice</h3>
+<p>₹90</p>
+<button onclick="addCart(60)">Add to Cart</button>
+<button class="wish">❤</button>
+</div>
+
+
+<div class="card">
+<img src="https://media.istockphoto.com/id/172876049/photo/whole-wheat-flour.jpg?s=612x612&w=0&k=20&c=bK48VqkF49oReBRhDoGfMORGapX2iWosEeImG_SXA8Q=" alt="">
+<h3>Weat Flour</h3>
+<p>₹60</p>
+<button onclick="addCart(60)">Add to Cart</button>
+<button class="wish">❤</button>
+</div>
+
+
+<div class="card">
+<img src="https://images.immediate.co.uk/production/volatile/sites/30/2019/08/Onion-72ea178.jpg?resize=1366,1503" alt="">
+<h3>Onion</h3>
+<p>₹40</p>
+<button onclick="addCart(60)">Add to Cart</button>
+<button class="wish">❤</button>
+</div>
+
+
+<div class="card">
+<img src="https://static.toiimg.com/thumb/64587748.cms?width=1200&height=900" alt="">
+<h3>Garlic</h3>
+<p>₹70</p>
+<button onclick="addCart(60)">Add to Cart</button>
+<button class="wish">❤</button>
+</div>
+
+
+<div class="card">
+<img src="https://www.greendna.in/cdn/shop/products/Mushroom33_2794x.jpg?v=1627141621" alt="">
+<h3>Mushroom</h3>
+<p>₹80</p>
+<button onclick="addCart(60)">Add to Cart</button>
+<button class="wish">❤</button>
+</div>
+
+
+<div class="card">
+<img src="https://www.trustbasket.com/cdn/shop/articles/Carrot.jpg?v=1688378789" alt="">
+<h3>Carrot</h3>
+<p>₹30</p>
+<button onclick="addCart(60)">Add to Cart</button>
+<button class="wish">❤</button>
+</div>
+
+
+
+
+</div>
+
+<section class="cart">
+<h2>Your Cart</h2>
+<p>Items : <span id="items">0</span></p>
+<p>Total : ₹<span id="total">0</span></p>
+<button class="checkout">Checkout</button>
 </section>
-
-<!-- ================= FOOTER ================= -->
-
-<footer>
-
-<div class="footer-content">
-
-<div>
-
-<h3>Shop</h3>
-
-<p>Mac</p>
-<p>iPhone</p>
-<p>iPad</p>
-<p>Watch</p>
-
-</div>
-
-<div>
-
-<h3>Services</h3>
-
-<p>Apple Music</p>
-<p>Apple TV+</p>
-<p>AppleCare+</p>
-
-</div>
-
-<div>
-
-<h3>Support</h3>
-
-<p>Help Center</p>
-<p>Contact</p>
-<p>Warranty</p>
-
-</div>
-
-</div>
-
-<hr>
-
-<p class="copyright">
-
-© 2026 Apple Store Clone. Designed with HTML, CSS & JavaScript.
-
-</p>
-
-</footer>
 
 <script src="script.js"></script>
+
+
+
+
+
+
+</section>
 
 </body>
 </html>
